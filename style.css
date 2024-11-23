@@ -1,0 +1,72 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color:#b7a6b7;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+
+header {
+    background-color: #b7a6b7;
+    color: whitesmoke;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 10px
+}
+
+section {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-top: 0;
+}
+
+
+#content {
+    flex-grow: 1; /* 콘텐츠가 적어도 footer가 갤러리 아래로 밀려가도록 함 */
+}
+
+#gallery {
+    flex-grow: 1;  /* #gallery가 공간을 차지하도록 설정 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 50px; /* footer와 겹치지 않도록 여백 추가 */
+  }
+  
+  footer {
+    background-color: #b7a6b7;
+    color: whitesmoke;
+    padding: 5px;
+    text-align: center;
+    position: fixed;  /* footer 고정 */
+    bottom: 0;  /* 화면 하단에 고정 */
+    width: 100%;  /* 화면 전체 너비를 차지하도록 */
+    left: 100;  /* 화면 왼쪽 끝에 고정 */
+  }
+
+#gallery img {
+    width: calc(40% - 10px); /* 각 이미지의 너비를 40%로 설정하고, 간격을 고려하여 10px만큼 뺌 */
+    height: auto; /* 이미지의 비율을 유지하면서 자동 높이 조정 */
+    justify-content: center;
+}
+
+.last-images {
+    display: flex;
+    justify-content: center; /* 마지막 두 이미지를 가운데로 정렬 */
+    gap: 10px; /* 마지막 두 이미지 간 간격 */
+    margin-top: 20px; /* 마지막 두 이미지와 이전 이미지 간 간격 */
+}
+
+.last-images img {
+    margin-bottom: 150px; /* 마지막 두 이미지 아래 간격 추가 */
+}
+
